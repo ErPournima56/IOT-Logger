@@ -34,28 +34,28 @@ It combines hardware-level data acquisition with software-based processing and l
 
 Here’s how the system operates step by step 👇
 1. Data Acquisition: 
-The IoT Gateway communicates with sensors or controllers through available interfaces like GPIO, USB, or RS485 (Modbus).
-It continuously reads data such as temperature, pressure, or vibration from these connected devices.
+The IoT Gateway reads continuous data from connected sensors or controllers through GPIO, USB, or RS485 (Modbus).
+These inputs represent real-world variables like temperature, pressure, or vibration.
 
 2. Data Processing: 
-Each data point is locally processed:
- * Raw values are converted into usable units.
- * Each record is timestamped and validated.
- * Temporary storage ensures no loss during disconnections
+Each data point is processed locally by:
+ * Converting raw sensor values into engineering units.
+ * Attaching timestamps and record IDs.
+ * Validating readings and filtering unstable values.
+ * Temporarily storing records to prevent data loss during network outages.
 
 3. Database Logging: 
-The gateway connects to a MySQL database through an ODBC Data Source Name (DSN).
-Data is inserted automatically into predefined tables (e.g., results or measurements).
-The ODBC layer keeps the application independent of database configuration — making it portable and easy to deploy anywhere.
+The gateway connects to a MySQL database via an ODBC DSN.
+It automatically inserts formatted entries into predefined tables (e.g., results or measurements).
+This DSN-based design decouples the code from specific database configurations, making deployment simple and portable.
 
 4. Data Storage & Access: 
-All logged data is stored in the MySQL server running locally or remotely.
-The data can be viewed, filtered, or exported using MySQL Workbench or any analytics tool.
-Users can visualize the data or generate reports in CSV or spreadsheet format for further analysis.
+All logged data is securely stored in MySQL — locally or remotely.
+Using **MySQL Workbench**, users can visualize, filter, and export data in CSV or spreadsheet formats for further analysis.
 
 5. Reliability & Recovery: 
-If the gateway loses its network connection, data is buffered locally and pushed to the database once the connection is restored.
-This ensures zero data loss and continuous operation in industrial environments.
+If the network connection is lost, the gateway automatically switches to offline buffering.
+When the connection is restored, all pending records are synced seamlessly to the main database — ensuring **zero data loss**.
 
 # Key features
 Device integration: captures live telemetry from sensors/controllers over Ethernet or Wi-Fi.
