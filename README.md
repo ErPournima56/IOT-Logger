@@ -33,6 +33,7 @@ The IoT Logger is built around an edge gateway that connects directly to sensors
 It combines hardware-level data acquisition with software-based processing and logging.
 
 Here’s how the system operates step by step 👇
+
 **1. Data Acquisition: **
 The IoT Gateway reads continuous data from connected sensors or controllers through GPIO, USB, or RS485 (Modbus).
 These inputs represent real-world variables like temperature, pressure, or vibration.
