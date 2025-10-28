@@ -60,6 +60,7 @@ Using **MySQL Workbench**, users can visualize, filter, and export data in CSV o
 If the network connection is lost, the gateway automatically switches to offline buffering.
 When the connection is restored, all pending records are synced seamlessly to the main database — ensuring **zero data loss**.
 
+![logs](log.png)
 # Key features
 **Device integration:** captures live telemetry from sensors/controllers over Ethernet or Wi-Fi.
 **Local buffering:** gateway stores data locally to tolerate intermittent connectivity.
