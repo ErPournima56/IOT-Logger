@@ -17,19 +17,19 @@ The system connects through an ODBC Data Source Name (DSN) — meter — and per
  * Inserts a new record dynamically by iterating through field indices.
  * Provides feedback upon successful data insertion.
  
-## ✨Features
+# Features
 - **Device Integration** – capture data from hardware/machines  
 - **MySQL Storage** – store records in structured tables via ODBC  
 - **Real-Time Logging** – process incoming data as it arrives  
 - **Extensible** – integrate with dashboards, APIs, or analytics tools  
 - **Reliable** – designed for continuous data collection  
 
-## 🛠️ Tech Stack
+# Tech Stack
 - **MySQL Server** – core database storage  
 - **ODBC** – connection layer for MySQL  
 - **Custom GUI Application** – manages communication with devices  
 
-## 📖 Use Cases
+# Use Cases
 - Industrial machine telemetry  
 - IoT sensor data collection  
 - Smart factory monitoring  
