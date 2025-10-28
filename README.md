@@ -1,4 +1,5 @@
 # IOT-Logger -- Edge-to-MySQL Real-Time Data Logging
+![IoT Logger Banner](banner.png)
 I built an **IoT Logger** that collects real-time data from sensors and industrial machines, processes it locally on an **edge gateway**, and stores it in a **MySQL database** for analysis.
 The idea was to make a **reliable**, **lightweight system** that works even if the network goes down and can run on a **Windows/linux-based gateway**.
 
