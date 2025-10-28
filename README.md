@@ -33,27 +33,27 @@ The IoT Logger is built around an edge gateway that connects directly to sensors
 It combines hardware-level data acquisition with software-based processing and logging.
 
 Here’s how the system operates step by step 👇
-1. Data Acquisition
+1. Data Acquisition: 
 The IoT Gateway communicates with sensors or controllers through available interfaces like GPIO, USB, or RS485 (Modbus).
 It continuously reads data such as temperature, pressure, or vibration from these connected devices.
 
-2. Data Processing
+2. Data Processing: 
 Each data point is locally processed:
  * Raw values are converted into usable units.
  * Each record is timestamped and validated.
  * Temporary storage ensures no loss during disconnections
 
-3. Database Logging
+3. Database Logging: 
 The gateway connects to a MySQL database through an ODBC Data Source Name (DSN).
 Data is inserted automatically into predefined tables (e.g., results or measurements).
 The ODBC layer keeps the application independent of database configuration — making it portable and easy to deploy anywhere.
 
-4. Data Storage & Access
+4. Data Storage & Access: 
 All logged data is stored in the MySQL server running locally or remotely.
 The data can be viewed, filtered, or exported using MySQL Workbench or any analytics tool.
 Users can visualize the data or generate reports in CSV or spreadsheet format for further analysis.
 
-5. Reliability & Recovery
+5. Reliability & Recovery: 
 If the gateway loses its network connection, data is buffered locally and pushed to the database once the connection is restored.
 This ensures zero data loss and continuous operation in industrial environments.
 
@@ -80,7 +80,7 @@ It performs all CRUD operations programmatically — reading, inserting, and upd
 
 # Functionality Summary
  * Establishes a secure ODBC connection to MySQL.
- * Fetches the table cup_results.
+ * Fetches the table 'results'.
  * Inserts a new record dynamically by iterating through field indices.
  * Provides feedback upon successful data insertion.
  
